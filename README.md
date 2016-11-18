@@ -31,10 +31,18 @@ baz, 6
 ```
 
 The resulting html file enables you to select wordlists of words that are overrepresented in either corpus.
-Items that are to the left of x-axis 0 are overrepresented in the first file, items to the right are overrepresented in the second.
+Items that are to the left of x-axis 0 are overrepresented in the first file, items to the right are overrepresented in the second. When the hover tool is selected, hovering over a datapoint displays the text value and ocurrence counts in the first and second documents. 
 
-You can adjust the p-value on the y-axis by entering an appropriate value to the p-value box.
+You can adjust the p-value on the y-axis by entering an appropriate value to the p-value box. 
+Smaller p-values correspond to higher statistical significance.
 You can adjust overrepresentation biases by using the sliders. When the settings have been adjusted to meet your goals, click on one of the numbers from 1-6 that correspond to the plot regions to see and export the words in that region.
+
+The general explanation for the regions would be:
+
+|            LEFT                                    | MIDDLE                     |  RIGHT                                              | 
+|----------------------------------------------------|----------------------------|-----------------------------------------------------| 
+| often occurring, overrepresented in the first file | often occurring, balanced  | often occurring, overrepresented in the second file | 
+| mostly empty                                       | seldom occurring, balanced | mostly empty                                        | 
 
 The following is a result of 
 
@@ -45,3 +53,9 @@ The following is a result of
 For more help use `python volcanoplot.py --help`
 
 This tool requires python libraries bokeh 0.12+, click, pandas, scipy and numpy.
+
+## Theoretical background and limitations
+
+x-axis shows overrepresentation in the first or second corpus.
+
+y-axis is computed from the uncorrected pvalue of Chi-square test. Hence the results are meaningful if documents heterogeniously cover example spaces and are independent (so do not share contents). Also the plot is not useful if corpora are not balanced. For instance, the writing style has significantly changed in time and there are more older cases negative cases. Then the plot may characterise changes in style and not in the desired property
