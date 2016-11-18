@@ -1,5 +1,15 @@
 # volcanoplot
 
+## Purpose
+
+The purpose of volcanoplot is to find overrepresented words or phrases by comparing two corpora. 
+
+For example in [this tutorial](https://github.com/estnltk/estnltk/blob/devel/docs/tutorials/adj_phrase_tagger.ipynb) we compare word usage in positive and negative customer reviews to find positively and negatively charged adjectives.
+
+[Another example](https://github.com/estnltk/volcanoplot/blob/master/docs/postimees_tutorial.ipynb) uses the tool to compare overrepresented words in newspaper articles from 1999 and 2000 to find the most talked-about topics of the respective years.
+
+## Usage
+
 This script reads two csv files and outputs an html file for interactive work.
 The csv files should contain two-element rows in the form "{item},{count}". 
 The csv files should be readable with `pandas` default csv dialect settings with an optional header.
