@@ -41,8 +41,8 @@ The general explanation for the regions would be:
 
 |            LEFT                                    | MIDDLE                     |  RIGHT                                              | 
 |----------------------------------------------------|----------------------------|-----------------------------------------------------| 
-| often occurring, overrepresented in the first file | often occurring, balanced  | often occurring, overrepresented in the second file | 
-| mostly empty                                       | seldom occurring, balanced | mostly empty                                        | 
+| often occurring, overrepresented in the first file, not by chance | often occurring, balanced  | often occurring, overrepresented in the second file, not by chance | 
+| mostly empty, overrepresented in the first file, statistically insignificant                                       | seldom occurring, balanced | mostly empty, overrepresented in the second file, statistically insignificant                                        | 
 
 The following is a result of 
 
