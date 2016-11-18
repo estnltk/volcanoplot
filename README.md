@@ -30,6 +30,6 @@ The following is a result of
 
 `python volcanoplot.py postimees_1999.csv postimees_2000.csv  post_ee.html --filter_below_total_count 200 --header True`
 
-![_static/volcano.png](volcano)
+![volcano](_static/volcano.png)
 
 For more help use `python volcanoplot.py --help`
