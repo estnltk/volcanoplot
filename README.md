@@ -33,3 +33,5 @@ The following is a result of
 ![volcano](_static/volcano.png)
 
 For more help use `python volcanoplot.py --help`
+
+This tool requires python libraries bokeh 0.12+, click, pandas, scipy and numpy.
