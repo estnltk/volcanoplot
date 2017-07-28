@@ -36,6 +36,8 @@ def save_static(data:pd.DataFrame, filename:str, title:str):
         webgl=True,
         plot_width=800,
         plot_height=700,
+        x_range=Range1d(-1.1, 1.1),
+        y_range=Range1d(-0.05, 1.05)
     )
 
     source = ColumnDataSource(data)
@@ -183,9 +185,10 @@ def save_static(data:pd.DataFrame, filename:str, title:str):
     plot.yaxis[0].formatter = bokeh.models.formatters.PrintfTickFormatter()
     plot.yaxis[0].formatter.format = ''
 
-    plot.set(x_range=Range1d(-1.1, 1.1),
-             y_range=Range1d(-0.05, 1.05)
-             )
+    # not compatible with new version of bokeh
+    #plot.set(x_range=Range1d(-1.1, 1.1),
+    #         y_range=Range1d(-0.05, 1.05)
+    #         )
 
     sliders = VBox(
         p_value_text,
